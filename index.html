@@ -1,57 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Asynchronous JavaScript And XML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-
 <body>
-  <div id="create">
-    <input type="text" placeholder="name">
-    <a href="javascript:;">Create</a>
-  </div>
-  <div id="delete">
-    <input type="text" placeholder="id">
-    <a href="javascript:;">Delete</a>
-  </div>
-  <hr>
-  <ul id="users"></ul>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script>
-    $(function () {
-      $.ajax({
-        url: 'http://localhost:3000/users',
-        method: 'get',
-        dataType: 'json',
-        data: {}
-      }).done(function (res) {
-        console.log(res)
-        $('#users').empty()
-        res.forEach(function (user) {
-          $('#users').append('<li>' + user.id + "." + user.name + '</li>')
-        });
-      }).fail(function (err) {
-        console.log(err)
-      });
-
-      $('#delete > a').on('click', function () {
-        let id = $('#delete > input').val().trim();
-        if (!name) return false;
-        $.ajax({
-          url: 'http://localhost:3000/users' + id,
-          method: 'delete',
-          dataType: 'json'
-        }).done(function (res) {
-          console.log(res)
-        }).fail(function (err) {
-          console.log(err)
-        });
-      });
-    });
-  </script>
+    123
 </body>
-
 </html>
